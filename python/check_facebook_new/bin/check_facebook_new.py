@@ -21,7 +21,7 @@ password = form.find_element_by_css_selector("input[name='pass']")
 password.send_keys(argvs[2])
 form.submit()
 
-pinnedNav = driver.find_element_by_css_selector("#pinnedNav")
+pinnedNav = driver.find_element_by_css_selector("#groupsNav")
 for elem in pinnedNav.find_elements_by_css_selector("li > a"):
 	data = json.loads(elem.get_attribute('data-gt'))
 	if int(data['count']) > 0:
